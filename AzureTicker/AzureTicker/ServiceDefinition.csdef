@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AzureTicker" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2012-05.1.7">
+  <WorkerRole name="AzureTicker.Worker" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <Endpoints>
+      <InputEndpoint name="webapi" protocol="https" port="443" />
+    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="DataStorageConnection" />
+      <Setting name="Thumb1" />
+      <Setting name="Thumb2" />
+    </ConfigurationSettings>
+    <Certificates>
+    </Certificates>
+    <LocalResources>
+    </LocalResources>
+  </WorkerRole>
+</ServiceDefinition>
