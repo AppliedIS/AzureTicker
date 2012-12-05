@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="ms-https-connections-only" content="true"/>
+    <title>AzureTicker</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- AzureTicker references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/notifier.js"></script>   
+</head>
+<body onload="AIS.AzureTicker.loader.showRegisteredData()">
+    <div class="pageHeader">
+        <h1>Azure Ticker</h1>
+        <label id="RegisteredUser">Please register by entering your Windows Azure account credentials below.</label>
+    </div>
+    <div class="content">
+        <h2>Settings</h2>
+        <br />
+        <fieldset>
+            <legend></legend>
+            <div class="form-element">
+                <label>User Name</label>
+                <div>
+                    <input type="text" id="txtUserName" value="" placeholder="User Name required for registration..." />
+                </div>
+            </div>                
+            
+            <div class="form-element">
+                <label>Password</label>
+                <div>
+                    <input type="password" id="txtPassword" value="" placeholder="Password required for registration..." />
+                </div>
+            </div>            
+            
+            <div class="form-element">                                
+                <input type="submit" value="Submit Registration" id="btnSubmit" onclick="AIS.AzureTicker.notifier.submitRegistration(txtUserName.value,txtPassword.value)" />
+                <input type="submit" value="Remove Registration" id="btnRemoveRegistration" onclick="AIS.AzureTicker.removal.removeRegistration()" style="visibility: hidden;" />
+                <div id="ProgressContainer" style="display: none;">
+                    <progress id="pg1" style="height: 10px; width: 366px; color: white;"></progress>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+
+</body>
+</html>

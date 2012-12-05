@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Version="" Publisher="" Name="AIS.AzureTicker" />
+  <Properties>
+    <DisplayName>Azure Ticker</DisplayName>
+    <PublisherDisplayName>AIS</PublisherDisplayName>
+    <Logo>images\logo50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="Azure Ticker" Logo="images\logo150.png" SmallLogo="images\logo30.png" Description="Azure Ticker" ForegroundText="light" BackgroundColor="#0072c6">
+        <DefaultTile ShowName="noLogos" ShortName="Azure Ticker" />
+        <SplashScreen Image="images\splash620.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

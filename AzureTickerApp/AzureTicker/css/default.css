@@ -1,0 +1,77 @@
+﻿body {
+    font-family: "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    color: #fff;
+    background: #0072c6;
+    font-size: 11pt;
+}
+ h1, h2, h3 {
+            margin: 0;
+            font-weight: normal;
+            font-family: "Segoe UI Light","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+        }
+        .pageHeader {
+            position: absolute;
+            top: 0px;
+            left: 120px;
+            width: auto;
+            height: 110px;
+            padding-top: 30px;
+        }
+        .pageHeader h1 {
+            font-size: 42pt;
+        }
+        .content {
+            position: absolute;
+			top: 140px;
+            left: 120px;
+            background: none;
+            width: 400px;
+            height: auto;
+		}
+        fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .form-element {
+            margin-bottom: 20px;
+        }
+
+        .form-element div {
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            
+            width: 100%;
+        }
+
+        input[type="password"] {
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background: #0072c6;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 5px 25px;
+            cursor: pointer;
+        }
+         input[type="submit"]:hover {
+            background: #fff;
+            color: #0072c6;
+        }
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: filled) {
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}
