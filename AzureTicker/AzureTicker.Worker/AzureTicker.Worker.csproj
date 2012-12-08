@@ -70,8 +70,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\BillProvider.cs" />
-    <Compile Include="BL\Notifier.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\NotificationController.cs" />
     <Compile Include="Model\Repositories\INotificationRepository.cs" />

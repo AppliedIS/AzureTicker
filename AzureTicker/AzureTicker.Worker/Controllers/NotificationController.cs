@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Http;
 
-namespace AzureTicker.NotificationWorker.Controllers
+namespace AzureTicker.Worker.Controllers
 {
     public class NotificationController: ApiController
     {

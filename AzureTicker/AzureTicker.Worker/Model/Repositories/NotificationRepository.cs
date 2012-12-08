@@ -12,8 +12,8 @@ namespace AzureTicker.Worker.Model.Repositories
 {
     class NotificationRepository : INotificationRepository, IDisposable
     {
-        CloudStorageAccount storageAccount = null;
-        CloudTableClient tableClient = null;
+        readonly CloudStorageAccount storageAccount = null;
+        readonly CloudTableClient tableClient = null;
         TableServiceContext context = null;
 
         private const string tableName = "tableName";
@@ -135,8 +135,7 @@ namespace AzureTicker.Worker.Model.Repositories
         }
 
         public IEnumerable<Notification> GetNotificationsToSend()
-        {
-            DateTime nw = DateTime.UtcNow;
+        {            
             return (from n in context.CreateQuery<Notification>(tableName) select n).AsTableServiceQuery<Notification>().Where(n => (n.BalanceString != "New")).AsEnumerable();
         }
 

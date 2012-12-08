@@ -8,9 +8,6 @@ namespace AzureTicker.Worker.Model.TableStorage
 {
     public class Notification: Microsoft.WindowsAzure.StorageClient.TableServiceEntity
     {
-        public Notification()
-        {
-        }
 
         // Partition Key is the same constant (all in the same partition) which is set server side
 

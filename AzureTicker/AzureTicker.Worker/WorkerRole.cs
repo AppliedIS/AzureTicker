@@ -21,14 +21,11 @@ namespace AzureTicker.Worker
             // This is a sample worker implementation. Replace with your logic.
             Trace.WriteLine("AzureTicker.Worker entry point called", "Information");
 
-
-            HttpSelfHostServer server = null;
+            HttpSelfHostServer server = null;            
             try
             {
                 var endpoint = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints["webapi"];
-                Uri baseAddress = new Uri(string.Format("{0}://{1}", endpoint.Protocol, endpoint.IPEndpoint.ToString()));
-                Uri _address = new Uri(baseAddress, "/api");
-
+                Uri baseAddress = new Uri(string.Format("{0}://{1}", endpoint.Protocol, endpoint.IPEndpoint.ToString()));                
 
                 // Set up server configuration 
                 HttpSelfHostConfiguration config = new HttpSelfHostConfiguration(baseAddress);
@@ -48,7 +45,15 @@ namespace AzureTicker.Worker
             {
                 Trace.WriteLine("Failed to open Web Api host.", "Error");
                 Trace.WriteLine(e.ToString(), "Error");
+                if (server != null)
+                {                    
+                    server.Dispose();
+                }
+            }
 
+            while (true)
+            {
+                Thread.Sleep(10000);
             }
         }
 
